@@ -1,0 +1,38 @@
+{
+  "name": "flact",
+  "version": "1.0.0",
+  "description": "API CMS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development --watch ./frontend/index.js --output ./backend/app/static/main.js",
+    "build": "webpack --mode production ./frontend/index.js --output ./backend/app/static/main.js",
+    "backend": "cd backend && venv/bin/flask run --no-debugger",
+    "backend-test": "cd backend && venv/bin/flask test",
+    "app": "concurrently --kill-others \" webpack --mode development --watch ./frontend/index.js --output ./backend/app/static/main.js \" \" npm run backend \" "
+  },
+  "author": {
+    "name": "Saijal Shakya",
+    "email": "saijalshakya@gmail.com",
+    "website": "https://saijalshakya.com.np",
+    "github": "https://github.com/shakyasaijal"
+  },
+  "dependencies": {
+    "concurrently": "^5.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
+    "css-loader": "^3.5.3",
+    "file-loader": "^6.0.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "proxy": "http://localhost:5000"
+}
