@@ -17,7 +17,14 @@ module.exports = {
                 use: [
                     'file-loader',
                 ],
+            },
+            {
+                test: /\.less$/,
+                use: [{
+                    loader: "less-loader" // compiles Less to CSS
+                }]
             }
         ]
-    }
+    },
+    devtool: 'cheap-module-source-map'
 }   

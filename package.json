@@ -1,14 +1,14 @@
 {
-  "name": "flact",
+  "name": "flaskreact",
   "version": "1.0.0",
   "description": "API CMS",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development --watch ./frontend/index.js --output ./backend/app/static/main.js",
-    "build": "webpack --mode production ./frontend/index.js --output ./backend/app/static/main.js",
+    "dev": "webpack --mode development --watch ./frontend/index.js --output ./backend/flaskreact/static/main.js",
+    "build": "webpack --mode production ./frontend/index.js --output ./backend/flaskreact/static/main.js",
     "backend": "cd backend && venv/bin/flask run --no-debugger",
     "backend-test": "cd backend && venv/bin/flask test",
-    "app": "concurrently --kill-others \" webpack --mode development --watch ./frontend/index.js --output ./backend/app/static/main.js \" \" npm run backend \" "
+    "app": "concurrently --kill-others \" webpack --mode development --watch ./frontend/index.js --output ./backend/flaskreact/static/main.js \" \" npm run backend \" "
   },
   "author": {
     "name": "Saijal Shakya",
